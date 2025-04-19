@@ -1,43 +1,273 @@
-body {
-            background-color: #0e0d0d;
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .hero-section {
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-        .highlight {
-            color: #6e57ff;
-        }
-        .btn-custom {
-            background-color: #6e57ff;
-            color: white;
-        }
-        .testimonial, .results, .services, .examples, .why-us, .reviews, .contact {
-            padding: 60px 20px;
-        }
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .brand-logos img {
-            max-height: 40px;
-            margin: 10px;
-        }
-        .card-dark {
-            background-color: #1c1c1c;
-            border: none;
-            color: white;
-        }
-        .btn-glow {
-            background-color: #6e57ff;
-            color: white;
-            box-shadow: 0 0 10px #6e57ff;
-        }
+.calendly-inline-widget,
+.calendly-inline-widget *,
+.calendly-badge-widget,
+.calendly-badge-widget *,
+.calendly-overlay,
+.calendly-overlay * {
+    font-size: 16px;
+    line-height: 1.2em
+}
+
+.calendly-inline-widget iframe,
+.calendly-badge-widget iframe,
+.calendly-overlay iframe {
+    display: inline;
+    width: 100%;
+    height: 100%
+}
+
+.calendly-popup-content {
+    position: relative
+}
+
+.calendly-popup-content.calendly-mobile {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto
+}
+
+.calendly-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 9999;
+    background-color: #a5a5a5;
+    background-color: rgba(31, 31, 31, 0.4)
+}
+
+.calendly-overlay .calendly-close-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+.calendly-overlay .calendly-popup {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    width: 80%;
+    min-width: 900px;
+    max-width: 1000px;
+    height: 90%;
+    max-height: 680px
+}
+
+@media (max-width: 975px) {
+    .calendly-overlay .calendly-popup {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-transform: none;
+        transform: none;
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        max-height: none
+    }
+}
+
+.calendly-overlay .calendly-popup .calendly-popup-content {
+    height: 100%;
+}
+
+.calendly-overlay .calendly-popup-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #fff;
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+    background: url(https://assets.calendly.com/assets/external/close-icon.svg) no-repeat;
+    background-size: contain
+}
+
+@media (max-width: 975px) {
+    .calendly-overlay .calendly-popup-close {
+        top: 15px;
+        right: 15px
+    }
+}
+
+.calendly-badge-widget {
+    position: fixed;
+    right: 20px;
+    bottom: 15px;
+    z-index: 9998
+}
+
+.calendly-badge-widget .calendly-badge-content {
+    display: table-cell;
+    width: auto;
+    height: 45px;
+    padding: 0 30px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 2px 5px;
+    font-family: sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer
+}
+
+.calendly-badge-widget .calendly-badge-content.calendly-white {
+    color: #666a73
+}
+
+.calendly-badge-widget .calendly-badge-content span {
+    display: block;
+    font-size: 12px
+}
+
+.calendly-spinner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: -1
+}
+
+.calendly-spinner>div {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    vertical-align: middle;
+    -webkit-animation: calendly-bouncedelay 1.4s infinite ease-in-out;
+    animation: calendly-bouncedelay 1.4s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.calendly-spinner .calendly-bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s
+}
+
+.calendly-spinner .calendly-bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s
+}
+
+@-webkit-keyframes calendly-bouncedelay {
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes calendly-bouncedelay {
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+
+    pointer-events: none;
+}
+
+#__framer-editorbar {
+    color-scheme: light;
+}
+
+#__framer-editorbar.mode_normal {
+    overflow: hidden;
+    position: fixed;
+    bottom: 10px;
+    height: 34px;
+    border: none;
+    z-index: 2147483647;
+}
+
+#__framer-editorbar.mode_normal.status_hidden {
+    display: none;
+}
+
+#__framer-editorbar.mode_normal.status_measuring {
+    left: 0;
+    width: 100%;
+}
+
+#__framer-editorbar.mode_normal[width] {
+    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2), 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#__framer-editorbar.mode_subtle {
+    --padding-right: 10px;
+    overflow: hidden;
+    position: fixed;
+    right: var(--padding-right);
+    border: none;
+    z-index: 2147483647;
+    top: 0;
+    width: calc(100vw - var(--padding-right));
+    height: 100vh;
+}
+
+#__framer-editorbar.mode_subtle.status_hidden {
+    display: none;
+}
+
+#__framer-editorbar.mode_subtle.status_measuring {
+    clip-path: unset;
+}
+
+#__framer-editorbar.mode_subtle.fullscreen {
+    --padding-right: 0px;
+    left: 0;
+    right: initial;
+}
