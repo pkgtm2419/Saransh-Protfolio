@@ -1,63 +1,43 @@
 body {
-  font-family: 'Instrument Serif', serif;
-  background: #f8f9fa;
-  color: #0c0c0d;
-}
-.header, .footer {
-  background: #fff;
-}
-.hero-section {
-  min-height: 70vh;
-  background: #cbb9b6;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.hero-title {
-  color: #0c0c0d;
-  letter-spacing: -1px;
-  margin-bottom: 1.2rem;
-}
-.hero-subtitle {
-  color: #685653;
-  font-size: 1.6rem;
-  max-width: 750px;
-  margin: 0 auto;
-}
-#brand-gallery .brand-tile {
-  border-radius: 1.2rem;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 2px 24px rgba(44, 33, 49, 0.09);
-  transition: transform .25s cubic-bezier(.21,1,.27,1);
-  cursor: pointer;
-  min-height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: translateY(50px);
-}
-#brand-gallery .brand-tile img {
-  max-width: 80%;
-  height: auto;
-  transition: scale .3s cubic-bezier(.21,1,.27,1);
-}
-#brand-gallery .brand-tile:hover {
-  transform: scale(1.04) translateY(-4px);
-  box-shadow: 0 8px 32px rgba(44,33,49,0.13);
-}
-footer {
-  font-size: 1rem;
-}
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-  .hero-subtitle {
-    font-size: 1.16rem;
-  }
-}
+            background-color: #0e0d0d;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .hero-section {
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .highlight {
+            color: #6e57ff;
+        }
+        .btn-custom {
+            background-color: #6e57ff;
+            color: white;
+        }
+        .testimonial, .results, .services, .examples, .why-us, .reviews, .contact {
+            padding: 60px 20px;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .brand-logos img {
+            max-height: 40px;
+            margin: 10px;
+        }
+        .card-dark {
+            background-color: #1c1c1c;
+            border: none;
+            color: white;
+        }
+        .btn-glow {
+            background-color: #6e57ff;
+            color: white;
+            box-shadow: 0 0 10px #6e57ff;
+        }
